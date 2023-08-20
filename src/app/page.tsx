@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import './styles.css';
 import NavigationBar from './navigationBar';
 import CartItems from './cartItems';
 
@@ -22,8 +21,6 @@ const App: React.FC = () => {
     ],
   });
 
-  // UseEffect er en React hook som blir kjørt hver gang en dependency blir endret
-  // Rekalkuler hver gang cartItems blir endret og sett den nye verdien
   useEffect(() => {
     if (state.cartItems) {
       let totalItemsAmount = 0;
@@ -33,7 +30,6 @@ const App: React.FC = () => {
   }, [state.cartItems]);
 
   const handleDecrement = (item: IItem) => {
-    // Kopier state object array fordi det er immutable
     const cartItemCopy = [...state.cartItems];
     const itemIndex = cartItemCopy.indexOf(item);
     cartItemCopy[itemIndex].value--;
@@ -50,7 +46,6 @@ const App: React.FC = () => {
   };
 
   const handleDelete = (itemId: number) => {
-    // Filtrerer ut her pga enklest i denne casen
     const itemsFiltered = state.cartItems.filter((item: IItem) => {
       return item.id !== itemId;
     });
@@ -69,7 +64,7 @@ const App: React.FC = () => {
   return (
     <div className="h-screen w-screen flex justify-center px-0 py-[50px]">
       <main className="container">
-        <div className="bg-[#86e4f3] px-2.5 py-[50px] rounded-xl border-[10px] border-solid border-[#49848d] w-50">
+        <div className="bg-[#F9FAFB] px-2.5 py-[50px] rounded-xl border-[5px] border-solid border-[#9FA6B2] w-30">
           <NavigationBar
             totalUniqueItems={
               state.cartItems.filter((item: IItem) => item.value > 0).length

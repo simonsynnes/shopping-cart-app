@@ -13,9 +13,9 @@ const CartItem: React.FC<IProps> = (props) => {
   return (
     <div>
       <div className="justify-center text-2xl mb-4 flex">
-        <div className="mr-4">
+        <div className="mr-4 mt-3">
           <span
-            className={`w-[60px] text-2xl mb-4 ${
+            className={`w-[60px] text-2xl mb-2 ${
               props.cartItem.value === 0 ? ' warning' : ' primary'
             }`}
           >

@@ -1,9 +1,9 @@
-"use client"
+'use client';
 
-import React, { useEffect, useState } from "react";
-import "./style.css";
-import NavigationBar from "./navigationBar";
-import CartItems from "./cartItems";
+import React, { useEffect, useState } from 'react';
+import './style.css';
+import NavigationBar from './navigationBar';
+import CartItems from './cartItems';
 
 export interface IItem {
   id: number;
@@ -18,8 +18,8 @@ const App: React.FC = () => {
       { id: 2, value: 0 },
       { id: 3, value: 0 },
       { id: 4, value: 0 },
-      { id: 5, value: 0 }
-    ]
+      { id: 5, value: 0 },
+    ],
   });
 
   // UseEffect er en React hook som blir kjørt hver gang en dependency blir endret
@@ -69,7 +69,7 @@ const App: React.FC = () => {
   return (
     <div className="h-screen w-screen flex justify-center px-0 py-[50px]">
       <main className="container">
-        <div className="bg-[#86e4f3] px-2.5 py-[50px] rounded-xl border-[10px] border-solid border-[#49848d]">
+        <div className="bg-[#86e4f3] px-2.5 py-[50px] rounded-xl border-[10px] border-solid border-[#49848d] w-50">
           <NavigationBar
             totalUniqueItems={
               state.cartItems.filter((item: IItem) => item.value > 0).length

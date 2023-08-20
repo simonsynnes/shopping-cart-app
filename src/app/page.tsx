@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import './style.css';
+import './styles.css';
 import NavigationBar from './navigationBar';
 import CartItems from './cartItems';
 

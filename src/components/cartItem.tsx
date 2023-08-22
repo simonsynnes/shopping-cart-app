@@ -1,4 +1,4 @@
-import { IItem } from './page';
+import { IItem } from '../app/page';
 
 interface IProps {
   cartItems: IItem[];

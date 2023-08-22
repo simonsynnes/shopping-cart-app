@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import NavigationBar from './navigationBar';
-import CartItems from './cartItems';
+import NavigationBar from '../components/navigationBar';
+import CartItems from '../components/cartItems';
 
 export interface IItem {
   id: number;
